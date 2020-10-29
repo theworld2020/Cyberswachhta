@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_200"
+    android:theme="@android:style/Theme.NoTitleBar">
+
+    <LinearLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:text="Position: 0"
+            android:visibility="gone"
+            app:backgroundTint="@color/white" />
+
+        <co.ceryle.radiorealbutton.RadioRealButtonGroup
+            android:id="@+id/radioRealButtonGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:elevation="2dp"
+            app:rrbg_animateDrawables_enter="overshoot"
+            app:rrbg_animateDrawables_exit="overshoot"
+            app:rrbg_animateDrawables_scale="1.2"
+            app:rrbg_animateDrawables_tintColorFrom="@color/white"
+            app:rrbg_animateDrawables_tintColorTo="@android:color/transparent"
+            app:rrbg_animateDrawables_tintColor_duration="500"
+            app:rrbg_animateTexts_enter="overshoot"
+            app:rrbg_animateTexts_textColorFrom="@color/white"
+            app:rrbg_animateTexts_textColorTo="@color/black"
+            app:rrbg_animateTexts_textColor_duration="500"
+            app:rrbg_backgroundColor="@color/red_500"
+            app:rrbg_borderColor="@color/white"
+            app:rrbg_borderSize="1dp"
+            app:rrbg_bottomLineColor="@color/blue_300"
+            app:rrbg_bottomLineRadius="2dp"
+            app:rrbg_bottomLineSize="0dp"
+            app:rrbg_dividerColor="@color/white"
+            app:rrbg_dividerPadding="12dp"
+            app:rrbg_dividerRadius="2dp"
+            app:rrbg_dividerSize="1dp"
+            app:rrbg_enableDeselection="true"
+            app:rrbg_radius="2dp"
+            app:rrbg_selectorAboveOfBottomLine="false"
+            app:rrbg_selectorAnimationType="translate_y"
+            app:rrbg_selectorColor="@color/white"
+            app:rrbg_selectorRadius="0dp"
+            app:rrbg_selectorSize="8dp">
+
+            <co.ceryle.radiorealbutton.RadioRealButton
+                android:id="@+id/bt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rrb_drawable="@drawable/b4"
+                app:rrb_drawableGravity="left"
+                app:rrb_drawableHeight="36dp"
+                app:rrb_drawablePadding="4dp"
+                app:rrb_drawableWidth="36dp"
+                app:rrb_rippleColor="@color/black"
+                app:rrb_selectorColor="@color/black"
+                app:rrb_text="Google PLay Protect intro"
+                app:rrb_textColor="@color/white"
+                app:rrb_textGravity="left"
+                app:rrb_textSize="12sp"
+                app:rrb_textTypefacePath="fonts/shaka_pow.ttf" />
+
+            <co.ceryle.radiorealbutton.RadioRealButton
+                android:id="@+id/bt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rrb_drawable="@drawable/b3"
+                app:rrb_drawableGravity="top"
+                app:rrb_drawableHeight="36dp"
+                app:rrb_drawablePadding="4dp"
+                app:rrb_drawableWidth="36dp"
+                app:rrb_rippleColor="@color/blue_500"
+                app:rrb_selectorColor="@color/blue_500"
+                app:rrb_text="About Play Protect"
+                app:rrb_textColor="@color/white"
+                app:rrb_textGravity="center"
+                app:rrb_textSize="12sp"
+                app:rrb_textTypefacePath="fonts/shaka_pow.ttf" />
+
+            <co.ceryle.radiorealbutton.RadioRealButton
+                android:id="@+id/bt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rrb_drawable="@drawable/b5"
+                app:rrb_drawableGravity="right"
+                app:rrb_drawableHeight="36dp"
+                app:rrb_drawablePadding="4dp"
+                app:rrb_drawableWidth="36dp"
+                app:rrb_rippleColor="@color/yellow_600"
+                app:rrb_selectorColor="@color/yellow_600"
+                app:rrb_text="How to get it"
+                app:rrb_textColor="@color/white"
+                app:rrb_textFillSpace="true"
+                app:rrb_textGravity="right"
+                app:rrb_textSize="12sp"
+                app:rrb_textTypefacePath="fonts/shaka_pow.ttf" />
+        </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab"
+        android:layout_above="@+id/adView"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+   <!-- <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/pink_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/adView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        fab:fab_colorNormal="@color/pink"
+        fab:fab_colorPressed="@color/pink_pressed"
+        fab:fab_icon="@drawable/unnamed" />-->
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3116019886090764/3031801738"></com.google.android.gms.ads.AdView>
+</RelativeLayout>
